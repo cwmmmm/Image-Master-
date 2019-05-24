@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ImageMaster</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/new/prefix1/Icon/Icon.png</normaloff>:/new/prefix1/Icon/Icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>500</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>976</width>
+         <height>685</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>500</width>
+         <height>500</height>
+        </size>
+       </property>
+       <widget class="QLabel" name="label">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="geometry">
+         <rect>
+          <x>11</x>
+          <y>11</y>
+          <width>16</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="PaintLabel" name="paintlable">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>50</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+       <widget class="PointLabel" name="pointlabel">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>16</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1000</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionClose_Image"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+   </widget>
+   <widget class="QMenu" name="menuGeometry">
+    <property name="title">
+     <string>Geometry</string>
+    </property>
+    <addaction name="actionRotate_Right_90"/>
+    <addaction name="actionRotate_180"/>
+    <addaction name="actionRotate_Left_90"/>
+    <addaction name="actionCustom_Rotation"/>
+    <addaction name="separator"/>
+    <addaction name="actionHorozontal_Mirror"/>
+    <addaction name="actionVertical_Mirror"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoom_in"/>
+    <addaction name="actionZoom_out"/>
+   </widget>
+   <widget class="QMenu" name="menuHistogram">
+    <property name="title">
+     <string>Histogram</string>
+    </property>
+    <addaction name="actionR_Type"/>
+    <addaction name="actionG_Type"/>
+    <addaction name="actionB_Type"/>
+    <addaction name="actionSynthetical"/>
+   </widget>
+   <widget class="QMenu" name="menuSharpen">
+    <property name="title">
+     <string>Sharpen</string>
+    </property>
+    <addaction name="actionLow_Sharpen"/>
+    <addaction name="actionHigh_Sharpen"/>
+    <addaction name="actionCustom_Sharpen"/>
+   </widget>
+   <widget class="QMenu" name="menuBasic">
+    <property name="title">
+     <string>Basic</string>
+    </property>
+    <addaction name="actionCut"/>
+    <addaction name="actionScreen_Shot"/>
+    <addaction name="actionScreen_Cut"/>
+    <addaction name="separator"/>
+    <addaction name="actionBrightness"/>
+    <addaction name="actionSaturation"/>
+    <addaction name="actionContrast"/>
+    <addaction name="actionAlpha"/>
+    <addaction name="actionBlack_White"/>
+    <addaction name="actionGrey_Level"/>
+   </widget>
+   <widget class="QMenu" name="menuNoise_Reduction">
+    <property name="title">
+     <string>Noise Reduction</string>
+    </property>
+    <addaction name="actionLow_Reduce"/>
+    <addaction name="actionHigh_Reduce"/>
+    <addaction name="actionCustom_Reduce"/>
+   </widget>
+   <widget class="QMenu" name="menuEdge_Enhancement">
+    <property name="title">
+     <string>Edge Enhancement</string>
+    </property>
+    <addaction name="actionHorizontal"/>
+    <addaction name="actionVertical"/>
+    <addaction name="actionContour"/>
+    <addaction name="actionDetection"/>
+   </widget>
+   <widget class="QMenu" name="menu_Perspective_Transformation">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>Advanced</string>
+    </property>
+    <addaction name="actionPerspective_Transformation"/>
+    <addaction name="actionAnalog_Double_Exposure"/>
+    <addaction name="actionIntelligent_Image_Segmentation"/>
+    <addaction name="separator"/>
+    <addaction name="actionFourierReal"/>
+    <addaction name="actionFourierImaginary"/>
+    <addaction name="actionFourierMagnitude"/>
+    <addaction name="actionFourierPhase"/>
+   </widget>
+   <widget class="QMenu" name="menuColor">
+    <property name="title">
+     <string>Color</string>
+    </property>
+    <addaction name="actionKeep_Red"/>
+    <addaction name="actionKeep_Green"/>
+    <addaction name="actionKeep_Blue"/>
+    <addaction name="separator"/>
+    <addaction name="actionReduce_Red"/>
+    <addaction name="actionReduce_Green"/>
+    <addaction name="actionReduce_Blue"/>
+    <addaction name="separator"/>
+    <addaction name="actionInvert_Color"/>
+    <addaction name="separator"/>
+    <addaction name="actionRGB_Controller"/>
+   </widget>
+   <widget class="QMenu" name="menuFilter">
+    <property name="title">
+     <string>Filter</string>
+    </property>
+    <addaction name="actionBrownness"/>
+    <addaction name="actionFrost_Glass"/>
+    <addaction name="actionEmbossment"/>
+   </widget>
+   <widget class="QMenu" name="menuSmooth">
+    <property name="title">
+     <string>Smooth</string>
+    </property>
+    <addaction name="actionLow_Smooth"/>
+    <addaction name="actionHigh_Smooth"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuBasic"/>
+   <addaction name="menuColor"/>
+   <addaction name="menuGeometry"/>
+   <addaction name="menuHistogram"/>
+   <addaction name="menuSharpen"/>
+   <addaction name="menuSmooth"/>
+   <addaction name="menuNoise_Reduction"/>
+   <addaction name="menuFilter"/>
+   <addaction name="menuEdge_Enhancement"/>
+   <addaction name="menu_Perspective_Transformation"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionClose_Image"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="actionScreen_Shot"/>
+   <addaction name="separator"/>
+   <addaction name="actionZoom_in"/>
+   <addaction name="actionZoom_out"/>
+   <addaction name="separator"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionAccept"/>
+   <addaction name="actionCancel"/>
+   <addaction name="separator"/>
+   <addaction name="actionRotate_Right_90"/>
+   <addaction name="actionRotate_180"/>
+   <addaction name="actionRotate_Left_90"/>
+   <addaction name="actionHorozontal_Mirror"/>
+   <addaction name="actionVertical_Mirror"/>
+   <addaction name="separator"/>
+   <addaction name="actionLow_Sharpen"/>
+   <addaction name="actionLow_Smooth"/>
+   <addaction name="separator"/>
+   <addaction name="actionBrownness"/>
+   <addaction name="actionFrost_Glass"/>
+   <addaction name="actionEmbossment"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/open.png</normaloff>:/new/prefix1/Icon/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/save.png</normaloff>:/new/prefix1/Icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionTranslation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Translation</string>
+   </property>
+  </action>
+  <action name="actionRotate_Right_90">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/rotate_rignt90.png</normaloff>:/new/prefix1/Icon/rotate_rignt90.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Right 90°</string>
+   </property>
+  </action>
+  <action name="actionRotate_180">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/rotate_180.png</normaloff>:/new/prefix1/Icon/rotate_180.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate 180°</string>
+   </property>
+  </action>
+  <action name="actionRotate_Left_90">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/rotate_left90.png</normaloff>:/new/prefix1/Icon/rotate_left90.png</iconset>
+   </property>
+   <property name="text">
+    <string>Rotate Left 90°</string>
+   </property>
+  </action>
+  <action name="actionHorozontal_Mirror">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Horizontal Mirror.png</normaloff>:/new/prefix1/Icon/Horizontal Mirror.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizontal Mirror</string>
+   </property>
+  </action>
+  <action name="actionVertical_Mirror">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Vertical Mirror.png</normaloff>:/new/prefix1/Icon/Vertical Mirror.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vertical Mirror</string>
+   </property>
+  </action>
+  <action name="actionR_Type">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Red Histogram.png</normaloff>:/new/prefix1/Icon/Red Histogram.png</iconset>
+   </property>
+   <property name="text">
+    <string>R-Type</string>
+   </property>
+  </action>
+  <action name="actionG_Type">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Green Histogram.png</normaloff>:/new/prefix1/Icon/Green Histogram.png</iconset>
+   </property>
+   <property name="text">
+    <string>G-Type</string>
+   </property>
+  </action>
+  <action name="actionB_Type">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Blue Histogram.png</normaloff>:/new/prefix1/Icon/Blue Histogram.png</iconset>
+   </property>
+   <property name="text">
+    <string>B-Type</string>
+   </property>
+  </action>
+  <action name="actionLow_Sharpen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/LowSharpen.png</normaloff>:/new/prefix1/Icon/LowSharpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Low-Sharpen</string>
+   </property>
+  </action>
+  <action name="actionMedium_Sharpen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Mid-Sharpen</string>
+   </property>
+  </action>
+  <action name="actionHigh_Sharpen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/HighSharpen.png</normaloff>:/new/prefix1/Icon/HighSharpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>High-Sharpen</string>
+   </property>
+  </action>
+  <action name="actionCustom_Sharpen">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/CustomSharpen.png</normaloff>:/new/prefix1/Icon/CustomSharpen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom Degree...</string>
+   </property>
+  </action>
+  <action name="actionBrightness">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/brightness.png</normaloff>:/new/prefix1/Icon/brightness.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="actionContrast">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/contrast.png</normaloff>:/new/prefix1/Icon/contrast.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contrast</string>
+   </property>
+  </action>
+  <action name="actionLow_Reduce">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/LowReduce.png</normaloff>:/new/prefix1/Icon/LowReduce.png</iconset>
+   </property>
+   <property name="text">
+    <string>Low-Reduce</string>
+   </property>
+  </action>
+  <action name="actionHigh_Reduce">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/HighReduce.png</normaloff>:/new/prefix1/Icon/HighReduce.png</iconset>
+   </property>
+   <property name="text">
+    <string>High-Reduce</string>
+   </property>
+  </action>
+  <action name="actionCustom_Reduce">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/CustomReduce.png</normaloff>:/new/prefix1/Icon/CustomReduce.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom-Degree</string>
+   </property>
+  </action>
+  <action name="actionHorizontal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Horizontal.png</normaloff>:/new/prefix1/Icon/Horizontal.png</iconset>
+   </property>
+   <property name="text">
+    <string>Horizontal</string>
+   </property>
+  </action>
+  <action name="actionVertical">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Vertical.png</normaloff>:/new/prefix1/Icon/Vertical.png</iconset>
+   </property>
+   <property name="text">
+    <string>Vertical</string>
+   </property>
+  </action>
+  <action name="actionPerspective_Transformation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/perspective.png</normaloff>:/new/prefix1/Icon/perspective.png</iconset>
+   </property>
+   <property name="text">
+    <string>Perspective Transformation</string>
+   </property>
+  </action>
+  <action name="actionAnalog_Double_Exposure">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/exposure.png</normaloff>:/new/prefix1/Icon/exposure.png</iconset>
+   </property>
+   <property name="text">
+    <string>Analog Double Exposure</string>
+   </property>
+  </action>
+  <action name="actionIntelligent_Image_Segmentation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/segmentation.png</normaloff>:/new/prefix1/Icon/segmentation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Intelligent Image Segmentation</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Save as.png</normaloff>:/new/prefix1/Icon/Save as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+  </action>
+  <action name="actionAlpha">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/alpha.png</normaloff>:/new/prefix1/Icon/alpha.png</iconset>
+   </property>
+   <property name="text">
+    <string>Alpha</string>
+   </property>
+  </action>
+  <action name="actionBlack_White">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/black and white.png</normaloff>:/new/prefix1/Icon/black and white.png</iconset>
+   </property>
+   <property name="text">
+    <string>Black-White</string>
+   </property>
+  </action>
+  <action name="actionGrey_Level">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Grey level.png</normaloff>:/new/prefix1/Icon/Grey level.png</iconset>
+   </property>
+   <property name="text">
+    <string>Grey-Level</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Undo.png</normaloff>:/new/prefix1/Icon/Undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionClose_Image">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/close.png</normaloff>:/new/prefix1/Icon/close.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Redo.png</normaloff>:/new/prefix1/Icon/Redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionKeep_Red">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Red.png</normaloff>:/new/prefix1/Icon/Red.png</iconset>
+   </property>
+   <property name="text">
+    <string>Keep Red</string>
+   </property>
+  </action>
+  <action name="actionKeep_Green">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Green.png</normaloff>:/new/prefix1/Icon/Green.png</iconset>
+   </property>
+   <property name="text">
+    <string>Keep Green</string>
+   </property>
+  </action>
+  <action name="actionKeep_Blue">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Blue.png</normaloff>:/new/prefix1/Icon/Blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Keep Blue</string>
+   </property>
+  </action>
+  <action name="actionReduce_Red">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Reduce Red.png</normaloff>:/new/prefix1/Icon/Reduce Red.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reduce Red</string>
+   </property>
+  </action>
+  <action name="actionReduce_Green">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Reduce Green.png</normaloff>:/new/prefix1/Icon/Reduce Green.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reduce Green</string>
+   </property>
+  </action>
+  <action name="actionReduce_Blue">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Reduce Blue.png</normaloff>:/new/prefix1/Icon/Reduce Blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>Reduce Blue</string>
+   </property>
+  </action>
+  <action name="actionRGB_Controller">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/RGB.png</normaloff>:/new/prefix1/Icon/RGB.png</iconset>
+   </property>
+   <property name="text">
+    <string>RGB Controller</string>
+   </property>
+  </action>
+  <action name="actionInvert_Color">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/InvertColor.png</normaloff>:/new/prefix1/Icon/InvertColor.png</iconset>
+   </property>
+   <property name="text">
+    <string>Invert Color</string>
+   </property>
+  </action>
+  <action name="actionCustom_Rotation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/CustomRotate.png</normaloff>:/new/prefix1/Icon/CustomRotate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Custom Rotation</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_Enhancement">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Laplacian Enhancement</string>
+   </property>
+  </action>
+  <action name="actionLaplacian_Enhancement_2">
+   <property name="text">
+    <string>Laplacian-Enhancement</string>
+   </property>
+  </action>
+  <action name="actionZoom_in">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Zoom in.png</normaloff>:/new/prefix1/Icon/Zoom in.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Zoom out.png</normaloff>:/new/prefix1/Icon/Zoom out.png</iconset>
+   </property>
+   <property name="text">
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionSynthetical">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Synthetical Histogram.png</normaloff>:/new/prefix1/Icon/Synthetical Histogram.png</iconset>
+   </property>
+   <property name="text">
+    <string>Synthetical</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Cut.png</normaloff>:/new/prefix1/Icon/Cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionAccept">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Accept.png</normaloff>:/new/prefix1/Icon/Accept.png</iconset>
+   </property>
+   <property name="text">
+    <string>Accept</string>
+   </property>
+   <property name="toolTip">
+    <string>Accept</string>
+   </property>
+  </action>
+  <action name="actionCancel">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Cancel.png</normaloff>:/new/prefix1/Icon/Cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+   <property name="toolTip">
+    <string>Cancel</string>
+   </property>
+  </action>
+  <action name="actionDetection">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Detection.png</normaloff>:/new/prefix1/Icon/Detection.png</iconset>
+   </property>
+   <property name="text">
+    <string>Detection</string>
+   </property>
+  </action>
+  <action name="actionBrownness">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Browness.png</normaloff>:/new/prefix1/Icon/Browness.png</iconset>
+   </property>
+   <property name="text">
+    <string>Brownness</string>
+   </property>
+  </action>
+  <action name="actionSaturation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/saturation.png</normaloff>:/new/prefix1/Icon/saturation.png</iconset>
+   </property>
+   <property name="text">
+    <string>Saturation</string>
+   </property>
+  </action>
+  <action name="actionScreen_Shot">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Screenshot.png</normaloff>:/new/prefix1/Icon/Screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>Screen Shot</string>
+   </property>
+  </action>
+  <action name="actionContour">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/contour.png</normaloff>:/new/prefix1/Icon/contour.png</iconset>
+   </property>
+   <property name="text">
+    <string>Contour</string>
+   </property>
+  </action>
+  <action name="actionFrost_Glass">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/glass.png</normaloff>:/new/prefix1/Icon/glass.png</iconset>
+   </property>
+   <property name="text">
+    <string>Frost Glass</string>
+   </property>
+  </action>
+  <action name="actionEmbossment">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/embossment.png</normaloff>:/new/prefix1/Icon/embossment.png</iconset>
+   </property>
+   <property name="text">
+    <string>Embossment</string>
+   </property>
+  </action>
+  <action name="actionLow_Smooth">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/LowSmooth.png</normaloff>:/new/prefix1/Icon/LowSmooth.png</iconset>
+   </property>
+   <property name="text">
+    <string>Low Smooth</string>
+   </property>
+  </action>
+  <action name="actionHigh_Smooth">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/HighSmooth.png</normaloff>:/new/prefix1/Icon/HighSmooth.png</iconset>
+   </property>
+   <property name="text">
+    <string>High Smooth</string>
+   </property>
+  </action>
+  <action name="actionFourierReal">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Real.png</normaloff>:/new/prefix1/Icon/Real.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fourier Real</string>
+   </property>
+  </action>
+  <action name="actionFourierImaginary">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Imaginary.png</normaloff>:/new/prefix1/Icon/Imaginary.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fourier Imaginary</string>
+   </property>
+  </action>
+  <action name="actionFourierMagnitude">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Magnitude.png</normaloff>:/new/prefix1/Icon/Magnitude.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fourier Magnitude</string>
+   </property>
+  </action>
+  <action name="actionFourierPhase">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Phase.png</normaloff>:/new/prefix1/Icon/Phase.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fourier Phase</string>
+   </property>
+  </action>
+  <action name="actionScreen_Cut">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/new/prefix1/Icon/Screenshot.png</normaloff>:/new/prefix1/Icon/Screenshot.png</iconset>
+   </property>
+   <property name="text">
+    <string>Screen Cut</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>PaintLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">paintlabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PointLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">paintlabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

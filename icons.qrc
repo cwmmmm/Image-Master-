@@ -1,0 +1,63 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>Icon/Icon.png</file>
+        <file>Icon/open.png</file>
+        <file>Icon/save.png</file>
+        <file>Icon/Save as.png</file>
+        <file>Icon/brightness.png</file>
+        <file>Icon/contrast.png</file>
+        <file>Icon/alpha.png</file>
+        <file>Icon/black and white.png</file>
+        <file>Icon/Grey level.png</file>
+        <file>Icon/close.png</file>
+        <file>Icon/Undo.png</file>
+        <file>Icon/Redo.png</file>
+        <file>Icon/Blue.png</file>
+        <file>Icon/Green.png</file>
+        <file>Icon/Red.png</file>
+        <file>Icon/Reduce Blue.png</file>
+        <file>Icon/Reduce Green.png</file>
+        <file>Icon/Reduce Red.png</file>
+        <file>Icon/RGB.png</file>
+        <file>Icon/rotate_180.png</file>
+        <file>Icon/rotate_left90.png</file>
+        <file>Icon/rotate_rignt90.png</file>
+        <file>Icon/Vertical Mirror.png</file>
+        <file>Icon/Horizontal Mirror.png</file>
+        <file>Icon/LowSharpen.png</file>
+        <file>Icon/HighSharpen.png</file>
+        <file>Icon/CustomSharpen.png</file>
+        <file>Icon/CustomRotate.png</file>
+        <file>Icon/InvertColor.png</file>
+        <file>Icon/Zoom in.png</file>
+        <file>Icon/Zoom out.png</file>
+        <file>Icon/Blue Histogram.png</file>
+        <file>Icon/Green Histogram.png</file>
+        <file>Icon/Red Histogram.png</file>
+        <file>Icon/Synthetical Histogram.png</file>
+        <file>Icon/Cut.png</file>
+        <file>Icon/Accept.png</file>
+        <file>Icon/Cancel.png</file>
+        <file>Icon/CustomReduce.png</file>
+        <file>Icon/Detection.png</file>
+        <file>Icon/exposure.png</file>
+        <file>Icon/LowReduce.png</file>
+        <file>Icon/HighReduce.png</file>
+        <file>Icon/saturation.png</file>
+        <file>Icon/Horizontal.png</file>
+        <file>Icon/Vertical.png</file>
+        <file>Icon/Browness.png</file>
+        <file>Icon/Screenshot.png</file>
+        <file>Icon/LowSmooth.png</file>
+        <file>Icon/HighSmooth.png</file>
+        <file>Icon/glass.png</file>
+        <file>Icon/embossment.png</file>
+        <file>Icon/contour.png</file>
+        <file>Icon/Real.png</file>
+        <file>Icon/Imaginary.png</file>
+        <file>Icon/Magnitude.png</file>
+        <file>Icon/Phase.png</file>
+        <file>Icon/perspective.png</file>
+        <file>Icon/segmentation.png</file>
+    </qresource>
+</RCC>
